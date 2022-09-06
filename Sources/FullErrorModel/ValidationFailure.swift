@@ -1,5 +1,3 @@
-import Foundation
-
 /// A structure for an array of validation errors.
 public struct ValidationFailure: Codable {
     // MARK: Stored properties
@@ -12,10 +10,14 @@ public struct ValidationFailure: Codable {
     /// The reason for the error.
     public let reason: String
     
+    /// The values for the error.
+    public let values: [String]
+    
     // MARK: - Init    
-    public init(field: String, code: String, reason: String) {
+    public init(field: String, code: String, reason: String, values: [String]) {
         self.field = field
         self.code = code
         self.reason = reason
+        self.values = values
     }
 }
