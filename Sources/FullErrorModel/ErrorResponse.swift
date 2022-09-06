@@ -14,7 +14,7 @@ public struct ErrorResponse: Codable {
     public let failures: [ValidationFailure]?
     
     // MARK: - Init
-    public init(code: String, reason: String, values: [String], failures: [ValidationFailure]?) {
+    public init(code: String, reason: String, values: [String] = [], failures: [ValidationFailure]?) {
         self.code = code
         self.reason = reason
         self.values = values
