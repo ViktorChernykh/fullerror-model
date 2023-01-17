@@ -1,18 +1,18 @@
-// swift-tools-version: 5.7
+// swift-tools-version:5.1
 
 import PackageDescription
 
 let package = Package(
-    name: "fullerror-model",
-    platforms: [
-        .macOS(.v12),
-    ],
-    products: [
-        .library(name: "FullErrorModel", targets: ["FullErrorModel"]),
-    ],
-    dependencies: [],
-    targets: [
-        .target(name: "FullErrorModel", dependencies: []),
-        .testTarget(name: "FullErrorModelTests", dependencies: [])
-    ]
+	name: "fullerror-model",
+	platforms: [
+		.macOS(.v10_15)
+	],
+	products: [
+		.library(name: "FullErrorModel", targets: ["FullErrorModel"]),
+	],
+	dependencies: [],
+	targets: [
+		.target(name: "FullErrorModel", dependencies: []),
+		.testTarget(name: "FullErrorModelTests", dependencies: [])
+	]
 )
