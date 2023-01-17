@@ -10,14 +10,10 @@ public struct ValidationFailure: Codable {
     /// The reason for the error.
     public let reason: String
 
-    /// The values for the error.
-    public let values: [String]
-
     // MARK: - Init
-    public init(field: String, code: String, reason: String, values: [String] = []) {
+    public init(field: String, code: String, reason: String) {
         self.field = field
         self.code = code
         self.reason = reason
-        self.values = values
     }
 }

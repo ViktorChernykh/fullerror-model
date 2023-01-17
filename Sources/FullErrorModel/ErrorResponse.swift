@@ -7,9 +7,6 @@ public struct ErrorResponse: Codable {
     /// The reason for the error.
     public let reason: String
 
-    /// The values for the error.
-    public let values: [String]
-
     /// List with validation failures.
     public let failures: [ValidationFailure]?
 
@@ -17,12 +14,10 @@ public struct ErrorResponse: Codable {
     public init(
         code: String = "",
         reason: String = "",
-        values: [String] = [],
         failures: [ValidationFailure]? = []
     ) {
         self.code = code
         self.reason = reason
-        self.values = values
         self.failures = failures
     }
 }
