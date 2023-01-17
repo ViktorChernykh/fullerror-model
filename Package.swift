@@ -5,7 +5,8 @@ import PackageDescription
 let package = Package(
 	name: "fullerror-model",
 	platforms: [
-		.macOS(.v10_15)
+		.macOS(.v10_15),
+		.iOS(.v10),
 	],
 	products: [
 		.library(name: "FullErrorModel", targets: ["FullErrorModel"]),
