@@ -1,4 +1,4 @@
-public struct VerificationsError: Error {
+public struct VerificationsError: Error, Sendable {
 	// MARK: Stored properties
 	public var failures: [ValidationFailure]
 

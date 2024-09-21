@@ -1,5 +1,5 @@
 /// A structure for an array of validation errors.
-public struct ValidationFailure: Codable {
+public struct ValidationFailure: Codable, Sendable {
 	// MARK: Stored properties
 	/// Field name.
 	public let field: String
