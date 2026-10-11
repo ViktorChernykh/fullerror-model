@@ -10,14 +10,19 @@ public struct ErrorResponse: ErrorResponseProtocol {
 	/// List with validation failures.
 	public let failures: [ValidationFailure]?
 
+	/// Typed values for translating the error.
+	public let parameters: [String: ErrorParameterValueType]?
+
 	// MARK: - Init
 	public init(
 		code: String = "",
 		reason: String = "",
-		failures: [ValidationFailure]? = []
+		failures: [ValidationFailure]? = [],
+		parameters: [String: ErrorParameterValueType]? = nil
 	) {
 		self.code = code
 		self.reason = reason
 		self.failures = failures
+		self.parameters = parameters
 	}
 }

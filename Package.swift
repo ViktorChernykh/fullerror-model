@@ -14,6 +14,6 @@ let package = Package(
 	dependencies: [],
 	targets: [
 		.target(name: "FullErrorModel", dependencies: []),
-		.testTarget(name: "FullErrorModelTests", dependencies: [])
+		.testTarget(name: "FullErrorModelTests", dependencies: ["FullErrorModel"])
 	]
 )
